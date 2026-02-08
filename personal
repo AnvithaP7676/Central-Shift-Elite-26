@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Carbon Footprint Calculator</title>
+<style>
+body { font-family: Arial; background: linear-gradient(135deg, #0f1a3c, #0fae8f); color:white; padding:20px; }
+.container { max-width:600px; margin:auto; background:rgba(255,255,255,0.08); padding:20px; border-radius:12px; }
+input, button { padding:10px; margin:5px 0; width:100%; border-radius:6px; border:none; font-size:1em; }
+button { background:#198754; color:white; cursor:pointer; }
+.result, .error { margin-top:15px; padding:15px; border-radius:10px; background:rgba(0,0,0,0.35); }
+.error { background:#ff6b6b; }
+.sub-button { display:block; width:200px; padding:10px; margin-top:10px; background:#0f1a3c; color:white; border:none; border-radius:8px; text-align:center; text-decoration:none; cursor:pointer; }
+.sub-button:hover { background:#0b1330; }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Carbon Footprint Calculator</h2>
+<form method="POST">
+<input type="text" name="transport" placeholder="Transport mode (car/train/bus/bike)" required>
+<input type="text" name="diet" placeholder="Diet (Veg / Non-Veg)" required>
+<input type="number" step="0.1" name="household" placeholder="Household size" required>
+<input type="number" step="0.1" name="trashbags" placeholder="Trashbags per week" required>
+<button type="submit">Calculate</button>
+</form>
+
+<a href="/game" class="sub-button">Mini Sustainability Game</a>
+
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}
+
+{% if result %}
+<div class="result">
+<p><strong>Weekly Carbon Footprint:</strong> {{ result.total }} kg CO₂e</p>
+<p>{{ result.details }}</p>
+<p><strong>Insight:</strong> {{ result.insight }}</p>
+</div>
+{% endif %}
+
+<a href="/" style="display:inline-block; margin-top:20px;"><button style="background:#14532d;">Back to Home</button></a>
+</div>
+</body>
+</html>
