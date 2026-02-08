@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SustainX</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(135deg, #0f1a3c, #0fae8f);
+    color:white;
+}
+h1 { font-size:3em; margin-bottom:0.2em; color:#7CFCB3; }
+p { font-size:1.2em; margin-bottom:2em; }
+.button { 
+    display:block; 
+    width:300px; 
+    padding:20px; 
+    margin:15px; 
+    font-size:1.2em; 
+    border:none; 
+    border-radius:12px; 
+    background:#198754; 
+    color:white; 
+    cursor:pointer; 
+    text-decoration:none;
+    text-align:center;
+}
+.button:hover { background:#14532d; }
+.sub-button {
+    display:block;
+    width:250px;
+    padding:15px;
+    margin:10px auto;
+    font-size:1em;
+    border:none;
+    border-radius:12px;
+    background:#0f1a3c;  /* Dark Blue */
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+}
+.sub-button:hover { background:#0b1330; }
+</style>
+</head>
+<body>
+<h1>SustainX</h1>
+<p>Explore your carbon impact and sustainability</p>
+
+<a class="button" href="/driving">Car Sustainability Calculator</a>
+<a class="button" href="/personal">Carbon Footprint Calculator</a>
+<a class="sub-button" href="/game">Mini Sustainability Game</a>
+
+</body>
+</html>
